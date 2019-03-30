@@ -1,0 +1,124 @@
+/* === GENERAL STYLING === */
+
+body {
+  margin: 0;
+  padding: 0;
+  --bgColor: #F6F7F9;
+  --accentColor: #E40015;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.6rem; }
+h4 {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+p em { font-family: "Playfair Display", sans-serif; }
+
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* === HEADER STYLING === */
+
+#home {
+  background-color: var(--bgColor);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+/* === MAIN STYLING === */
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+/* @@@ Hero Section @@@ */
+
+#hero-section {
+  background-image: url(../images/happy-tech-test-dog.jpg);
+  background-size: cover;
+  background-position: 70% 10%;
+  height: 100vh;
+}
+
+.hero-text {
+  padding: 3.5rem;
+  background-color: var(--bgColor);
+  max-width: 30%;
+  top: 45%;
+  position: absolute;
+}
+
+.hero-text h2 {
+  margin: 0;
+}
+
+/* @@@ Slider Section @@@ */
+
+#slider-section {
+  padding: 3rem;
+  text-align: center;
+  background-color: var(--bgColor);
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.slider img {
+  width: 70rem;
+}
+.slider i {
+  font-size: 4em;
+}
+
+.slider-description {
+  padding-top: 3rem;
+}
+.slider-description h4, p {
+  margin: 0;
+}
+.slider-description h4 {
+  font-size: 1.5rem;
+}
