@@ -53,7 +53,7 @@ nav {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .nav-item {
@@ -91,34 +91,79 @@ main {
 /* @@@ Slider Section @@@ */
 
 #slider-section {
-  padding: 3rem;
+  padding: 4rem 0;
   text-align: center;
   background-color: var(--bgColor);
 }
 
-.slider-container {
-  width: 100%;
-}
-
-.slider {
+.slide {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
-.slider img {
-  width: 70rem;
+.slide img {
+  width: 75%;
 }
-.slider i {
-  font-size: 4em;
+.slide i {
+  font-size: 4rem;
 }
 
-.slider-description {
+.slide-description {
   padding-top: 3rem;
 }
-.slider-description h4, p {
+.slide-description h4, p {
   margin: 0;
 }
-.slider-description h4 {
+.slide-description h4 {
   font-size: 1.5rem;
+}
+
+/* @@@ Feed Section @@@ */
+
+#feed-section {
+  padding: 8rem 0;
+}
+
+#feed-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feed-item {
+  margin: 2.5%;
+  max-width: 45%;
+  position: relative;
+  background-color: var(--bgColor);
+}
+.feed-item img {
+  width: 100%;
+}
+.feed-item .feed-text {
+  padding: 1.75rem;
+}
+.feed-item .feed-text h3 {
+  margin: 0 0 1rem 0;
+}
+.feed-item .feed-text p {
+  max-height: 120px;
+  overflow: hidden;
+}
+.feed-item .feed-date {
+  margin-top: -1.5rem;
+  padding: 0 10px;
+  position: absolute;
+  right: 2.5rem;
+  color: white;
+  background-color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.feed-item a {
+  color: var(--accentColor);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
 }
