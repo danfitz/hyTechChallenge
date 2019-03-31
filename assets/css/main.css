@@ -15,6 +15,7 @@ h1 { font-size: 2rem; }
 h2 { font-size: 3rem; }
 h3 { font-size: 2.6rem; }
 h4 {
+  margin: 0;
   font-family: "Cabin", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
@@ -22,11 +23,10 @@ h4 {
 }
 
 p {
+  margin: 0;
   font-family: "Cabin", sans-serif;
   font-size: 1.3rem;
   line-height: 2.5rem;
-  hyphens: auto;
-  word-wrap: break-word;
 }
 p em { font-family: "Playfair Display", sans-serif; }
 
@@ -85,7 +85,7 @@ main {
 }
 
 .hero-text h2 {
-  margin: 0;
+  margin: 1rem 0;
 }
 
 /* @@@ Slider Section @@@ */
@@ -111,9 +111,6 @@ main {
 
 .slide-description {
   padding-top: 3rem;
-}
-.slide-description h4, p {
-  margin: 0;
 }
 .slide-description h4 {
   font-size: 1.5rem;
@@ -166,4 +163,74 @@ main {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
+}
+
+/* @@@ Pre-footer Section @@@ */
+
+#pre-footer-section {
+  color: white;
+  background-color: #444;
+}
+
+#pre-footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#pre-footer-container > * {
+  padding: 4rem 0;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sitemap {
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+#pre-footer-form form {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+#pre-footer-form input {
+  margin-right: 5px;
+  padding-left: 10px;
+  height: 40px;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+#pre-footer-form button {
+  height: 46px;
+  color: white;
+  background-color: var(--accentColor);
+  border: 0;
+  text-transform: uppercase;
+}
+
+/* === FOOTER STYLING === */
+
+footer {
+  padding: 2rem 0;
+  color: white;
+  background-color: #231F1F;
+  border-top: 2px solid black;
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#copyright i {
+  font-size: 0.8em;
+}
+
+#social-icons > * {
+  margin-left: 10px;
 }
