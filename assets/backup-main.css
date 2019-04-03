@@ -5,16 +5,22 @@ body {
   padding: 0;
   --bgColor: #F6F7F9;
   --accentColor: #E40015;
+  --hoverAccentColor: #ff3244;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
-h1 { font-size: 2rem; }
+h1 { font-size: 2.2em; }
 h2 { font-size: 3rem; }
 h3 { font-size: 2.6rem; }
-h4 {
+h4, li {
   margin: 0;
   font-family: "Cabin", sans-serif;
   font-weight: 700;
@@ -27,13 +33,23 @@ p {
   font-family: "Cabin", sans-serif;
   font-size: 1.3rem;
   line-height: 2.5rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
-p em { font-family: "Playfair Display", sans-serif; }
 
-.wrapper {
-  max-width: 80%;
-  margin: 0 auto;
+.italicized {
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover { color: var(--accentColor); }
+a:focus { color: var(--accentColor); }
 
 /* === HEADER STYLING === */
 
@@ -43,10 +59,11 @@ p em { font-family: "Playfair Display", sans-serif; }
 
 nav {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
+nav li { font-size: 1.2em; }
 
 .nav-list {
   padding-left: 0;
@@ -57,7 +74,7 @@ nav {
 }
 
 .nav-item {
-  padding: 0 10px;
+  margin: 0.5rem 0 0.5rem 2rem;
 }
 
 /* === MAIN STYLING === */
@@ -69,13 +86,13 @@ nav {
   background-image: url(../images/happy-tech-test-dog.jpg);
   background-size: cover;
   background-position: 70% 10%;
-  height: 70rem;
+  height: 60rem;
 }
 
 .hero-text {
   padding: 3.5rem;
   background-color: var(--bgColor);
-  max-width: 30%;
+  max-width: 35%;
   position: absolute;
   top: 30%;
 }
@@ -87,14 +104,15 @@ nav {
 /* @@@ Slider Section @@@ */
 
 #slider-section {
-  padding: 4rem 0;
+  padding: 8rem 0;
   text-align: center;
   background-color: var(--bgColor);
 }
+#slider-section h3 { margin-top: 0; }
 
 .slide {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -102,11 +120,11 @@ nav {
   width: 75%;
 }
 .slide i {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .slide-description {
-  padding-top: 3rem;
+  margin-top: 3rem;
 }
 .slide-description h4 {
   font-size: 1.5rem;
@@ -119,71 +137,66 @@ nav {
 }
 
 #feed-container {
-  /*
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
+  grid-gap: 2.5rem;
 }
 
 .feed-item {
-  /*
-  margin: 2.5%;
-  max-width: 45%;
-  */
   position: relative;
   background-color: var(--bgColor);
 }
 .feed-item img {
   width: 100%;
 }
-.feed-item .feed-text {
-  padding: 1.75rem;
-}
-.feed-item .feed-text h3 {
-  margin-bottom: 1rem;
-}
-.feed-item .feed-text p {
-  max-height: 120px;
-  overflow: hidden;
-}
 .feed-item .feed-date {
   margin-top: -1.5rem;
-  padding: 0 10px;
+  padding: 0 1.2rem;
   position: absolute;
-  right: 2.5rem;
+  right: 3rem;
   color: white;
   background-color: var(--accentColor);
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-.feed-item a {
+.feed-item .feed-text {
+  padding: 3rem;
+  padding-bottom: 1rem;
+}
+.feed-item .feed-text h3 {
+  margin: 0 0 1rem 0;
+}
+.feed-item .feed-text p {
+  max-height: 7.5rem; /* STILL NEEDS WORK */
+  overflow: hidden;
+}
+.feed-item .feed-text a {
+  display: inline-block;
+  margin: 1rem 0;
   color: var(--accentColor);
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
 }
+.feed-item .feed-text a:hover { color: var(--hoverAccentColor); }
+.feed-item .feed-text a:focus { color: var(--hoverAccentColor); }
 
 /* @@@ Pre-footer Section @@@ */
 
 #pre-footer-section {
   color: white;
   background-color: #444;
+  padding: 2rem 0;
 }
 
 #pre-footer-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 #pre-footer-container > * {
-  padding: 4rem 0;
-  max-width: 460px;
+  padding: 2rem 0;
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -191,34 +204,39 @@ nav {
 
 .sitemap {
   margin: 0;
-  padding: 0 20px;
   list-style-type: none;
 }
+.sitemap-item a { color: white; }
+.sitemap-item a:hover { color: var(--accentColor); }
+.sitemap-item a:focus { color: var(--accentColor); }
 
+#pre-footer-form p { margin-bottom: 0.5rem; }
 #pre-footer-form form {
   display: grid;
   grid-template-columns: 7fr 3fr;
 }
 #pre-footer-form input {
-  margin-right: 0.5rem;
-  padding-left: 0.8rem;
-  height: 2rem;
-  font-family: "Playfair Display", sans-serif;
+  padding: 0.2rem 0.2rem 0.2rem 1rem;
+  margin-right: 0.3rem;
   font-size: 1.3rem;
-  font-style: italic;
 }
 #pre-footer-form button {
-  height: 3rem;
+  padding: 0.2rem 1rem;
   color: white;
   background-color: var(--accentColor);
   border: 0;
   text-transform: uppercase;
 }
+#pre-footer-form button:hover { background-color: var(--hoverAccentColor); }
+#pre-footer-form button:focus { background-color: var(--hoverAccentColor); }
+#pre-footer-form button p {
+  margin: 0;
+}
 
 /* === FOOTER STYLING === */
 
 footer {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   color: white;
   background-color: #231F1F;
   border-top: 2px solid black;
@@ -226,7 +244,7 @@ footer {
 
 #footer-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between;
 }
 
@@ -235,32 +253,53 @@ footer {
 }
 
 #social-icons > * {
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
-@media (max-width: 1100px) {
-  html { font-size: 15px; }
+/* === MEDIA QUERIES === */
 
+/* @@@ Portrait Tablets to Small Desktops @@@ */
+
+@media (max-width: 940px) {
   .hero-text {
-    display: inline-block;
-    position: absolute;
-    top: 40%;
-    max-width: 60%;
+    max-width: 55%;
   }
-}
-
-@media (max-width: 800px) {
-  html { font-size: 14px; }
-
   #feed-container {
     grid-template-columns: none;
     grid-template-rows: 1fr;
+    grid-column-gap: none;
   }
-  .feed-item .feed-text p {
-    max-height: none;
+  #pre-footer-container { flex-direction: column; }
+  #pre-footer-form form {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
   }
+  #pre-footer-form input { margin: 0 0 0.3rem 0; }
 }
 
-@media (max-width: 392px) {
-  html { font-size: 10px; }
+/* @@@ Landscape Phones to Portrait Tablets @@@ */
+
+@media (max-width: 768px) {
+  html { font-size: 0.94rem; }
+  nav { font-size: 1.1rem; }
+  .slide { display: block; }
+  .slide img { width: 100%; }
+  .slide i { display: none; }
+}
+
+/* @@@ Larger Portrait Phones @@@ */
+
+@media (max-width: 480px) {
+  html { font-size: 0.77rem; }
+  nav { font-size: 1.2rem; }
+}
+
+/* @@@ Smaller Portrait Phones @@@ */
+
+@media (max-width: 394px) {
+  html { font-size: 0.7rem; }
+  .hero-text {
+    top: 10%;
+    background-color: rgba(246, 247, 249, 0.8);
+  }
 }
