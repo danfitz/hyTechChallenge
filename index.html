@@ -12,17 +12,16 @@
   <body>
     <!--Title + Navbar-->
     <header id="home">
-        <nav class="wrapper">
-          <h1>HackerYou</h1>
-          <ul class="nav-list">
-            <li class="nav-item"><h4>Home</h4></li>
-            <li class="nav-item"><h4>About</h4></li>
-            <li class="nav-item"><h4>Contact</h4></li>
-            <li class="nav-item"><h4>Bootcamp</h4></li>
-            <li class="nav-item"><h4>Part-Time</h4></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="wrapper">
+        <h1>HackerYou</h1>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#hero-section">About</a></li>
+          <li class="nav-item"><a href="#pre-footer-form">Contact</a></li>
+          <li class="nav-item"><a href="#slider-section">Bootcamp</a></li>
+          <li class="nav-item"><a href="#feed-section">Part-Time</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -47,7 +46,7 @@
           </div>
           <div class="slide-description">
             <h4>Full-Time Web Development Immersive</h4>
-            <p><em>January 1st, 2019</em></p>
+            <p class="italicized">January 1st, 2019</p>
           </div>
         </div>
       </section>
@@ -65,7 +64,7 @@
             </div>
           </div>
           <div class="feed-item">
-            <img alt="This is a photo of an instructor teaching Web Development" src="assets/images/hackeryou-team.jpg">
+            <img alt="This is a photo of the hardworking team that makes HackerYou possible" src="assets/images/hackeryou-team.jpg">
             <p class="feed-date">Jan 8, 2019</p>
             <div class="feed-text">
               <h3>Team Culture</h3>
@@ -74,7 +73,7 @@
             </div>
           </div>
           <div class="feed-item">
-              <img alt="This is a photo of an instructor teaching Web Development" src="assets/images/student-learning-javascript.jpg">
+              <img alt="This is a photo of a student learning JavaScript" src="assets/images/student-learning-javascript.jpg">
               <p class="feed-date">Jan 6, 2019</p>
               <div class="feed-text">
                   <h3>JavaScript</h3>
@@ -102,20 +101,21 @@
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum my nibh euismod tincidunt.</p>
           </div>
           <ul class="sitemap">
-            <li class="sitemap-item"><h4>Home</h4></li>
-            <li class="sitemap-item"><h4>About</h4></li>
-            <li class="sitemap-item"><h4>Bootcamp</h4></li>
-            <li class="sitemap-item"><h4>Part-Time</h4></li>
-            <li class="sitemap-item"><h4>Contact</h4></li>
+            <li class="sitemap-item"><a href="#home">Home</a></li>
+            <li class="sitemap-item"><a href="#hero-section">About</a></li>
+            <li class="sitemap-item"><a href="#slider-section">Bootcamp</a></li>
+            <li class="sitemap-item"><a href="#feed-section">Part-Time</a></li>
+            <li class="sitemap-item"><a href="#pre-footer-form">Contact</a></li>
           </ul>
           <div id="pre-footer-form">
             <div id="form-description">
               <h4>Subscribe to Our Newsletter</h4>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
             </div>
-            <form action="action">
-              <input type="email" placeholder="email address" required>
-              <button type="Submit"><p>Subscribe</p></button>
+            <form action="action"> <!-- STILL NEEDS WORK WITH "ACTION" PHRASE -->
+              <!-- <label for="email-input"></label> STILL NEEDS WORK */ -->
+              <input id="email-input" class="italicized" type="email" placeholder="email address" required>
+              <button type="submit"><p>Subscribe</p></button>
             </form>
           </div>
           </div>
