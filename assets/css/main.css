@@ -35,17 +35,22 @@ p {
       hyphens: auto;
 }
 
-.italicized {
-  font-family: "Playfair Display", sans-serif;
-  font-style: italic;
-}
-
 a {
   text-decoration: none;
   color: black;
 }
 a:hover { color: #E40015; }
 a:focus { color: #E40015; }
+
+.italicized {
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+}
 
 /* === HEADER STYLING === */
 
@@ -104,7 +109,7 @@ nav li { font-size: 1.2em; }
 .hero-text {
   padding: 3.5rem;
   background-color: #F6F7F9;
-  max-width: 35%;
+  max-width: 33%;
   position: absolute;
   top: 30%;
 }
@@ -160,10 +165,14 @@ nav li { font-size: 1.2em; }
 #feed-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2.5rem 1fr; /* STILL NEEDS WORK */
+  -ms-grid-columns: 1fr 2.5rem 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2.5rem;
 }
+#feed-container > *:nth-child(1) { -ms-grid-column: 1; -ms-grid-row: 1; }
+#feed-container > *:nth-child(2) { -ms-grid-column: 3; -ms-grid-row: 1; }
+#feed-container > *:nth-child(3) { -ms-grid-column: 1; -ms-grid-row: 2; }
+#feed-container > *:nth-child(4) { -ms-grid-column: 3; -ms-grid-row: 2; }
 
 .feed-item {
   position: relative;
@@ -268,9 +277,7 @@ nav li { font-size: 1.2em; }
 }
 #pre-footer-form button:hover { background-color: #ff3244; }
 #pre-footer-form button:focus { background-color: #ff3244; }
-#pre-footer-form button p {
-  margin: 0;
-}
+#pre-footer-form button p { margin: 0; }
 
 /* === FOOTER STYLING === */
 
@@ -310,6 +317,7 @@ footer {
   .hero-text {
     max-width: 55%;
   }
+
   #feed-container {
     -ms-grid-columns: none;
     grid-template-columns: none;
@@ -317,10 +325,11 @@ footer {
     grid-template-rows: 1fr;
     grid-column-gap: none;
   }
-  #feed-container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
+  #feed-container > *:nth-child(1) { -ms-grid-column: 1; -ms-grid-row: 1; }
+  #feed-container > *:nth-child(2) { -ms-grid-column: 1; -ms-grid-row: 2; }
+  #feed-container > *:nth-child(3) { -ms-grid-column: 1; -ms-grid-row: 3; }
+  #feed-container > *:nth-child(4) { -ms-grid-column: 1; -ms-grid-row: 4; }
+
   #pre-footer-container {
     -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -333,15 +342,8 @@ footer {
     -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  #pre-footer-form form > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  #pre-footer-form form > *:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #pre-footer-form input { margin: 0 0 0.3rem 0; }
+  #pre-footer-form input { margin: 0 0 0.3rem 0; -ms-grid-row: 1; -ms-grid-column: 1; }
+  #pre-footer-form button { -ms-grid-row: 2; -ms-grid-column: 1; }
 }
 
 /* @@@ Landscape Phones to Portrait Tablets @@@ */
